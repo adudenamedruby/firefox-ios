@@ -15,8 +15,12 @@ class FileAccessorTests: XCTestCase {
         let docPath: NSString = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
         files = FileAccessor(rootPath: docPath.appendingPathComponent("filetest"))
 
-        testDir = try! files.getAndEnsureDirectory()
-        try! files.removeFilesInDirectory()
+        do {
+            testDir = try? files.getAndEnsureDirectory()
+            try? files.removeFilesInDirectory()
+        } catch let error {
+            XCTFail("Error settings things up for test: \(error.localizedDescription)")
+        }
     }
 
     override func tearDown() {

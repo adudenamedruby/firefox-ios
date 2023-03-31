@@ -108,7 +108,11 @@ class TestBrowserDB: XCTestCase {
         XCTAssertTrue(files.exists("foo.db-wal"))
 
         // But now it's been reopened, it's not the same -shm!
-        let shmBAttributes = try! files.attributesForFileAt(relativePath: "foo.db-shm")
+        do {
+            let shmBAttributes = try? files.attributesForFileAt(relativePath: "foo.db-shm")
+        } catch let error {
+            XCTFail("Failed getting attributes: \(error.localizedDescription)")
+        }
         let creationB = shmBAttributes[FileAttributeKey.creationDate] as! Date
         let inodeB = (shmBAttributes[FileAttributeKey.systemFileNumber] as! NSNumber).uintValue
         XCTAssertTrue(creationA.compare(creationB) != ComparisonResult.orderedDescending)

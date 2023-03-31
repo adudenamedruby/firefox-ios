@@ -80,10 +80,18 @@ class UITestAppDelegate: AppDelegate, FeatureFlaggable {
                 let enumerator = FileManager.default.enumerator(atPath: dirForTestProfile)
                 let filePaths = enumerator?.allObjects as! [String]
                 filePaths.filter { $0.contains(".archive") }.forEach { item in
-                    try! FileManager.default.removeItem(at: URL(fileURLWithPath: "\(dirForTestProfile)/\(item)"))
+                    do {
+                        try? FileManager.default.removeItem(at: URL(fileURLWithPath: "\(dirForTestProfile)/\(item)"))
+                    } catch let error {
+                        XCTFail("Failed with error: \(error.localizedDescription)")
+                    }
                 }
 
-                try! FileManager.default.copyItem(at: input, to: output)
+                do {
+                    try? FileManager.default.copyItem(at: input, to: output)
+                } catch let error {
+                    XCTFail("Failed with error: \(error.localizedDescription)")
+                }
             }
         }
 
