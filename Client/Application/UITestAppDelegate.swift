@@ -58,7 +58,7 @@ class UITestAppDelegate: AppDelegate, FeatureFlaggable {
                     try? FileManager.default.removeItem(at: URL(fileURLWithPath: "\(dirForTestProfile)/\(item)"))
                 }
 
-                try! FileManager.default.copyItem(at: input, to: output)
+                try? FileManager.default.copyItem(at: input, to: output)
 
                 // Tests currently load a browserdb history, we make sure we migrate it everytime
                 UserDefaults.standard.setValue(false, forKey: PrefsKeys.PlacesHistoryMigrationSucceeded)
@@ -169,8 +169,8 @@ class UITestAppDelegate: AppDelegate, FeatureFlaggable {
         let rootPath = appRootDir()
         let manager = FileManager.default
         let documents = URL(fileURLWithPath: rootPath)
-        let docContents = try! manager.contentsOfDirectory(atPath: rootPath)
-        for content in docContents {
+        let docContents = try? manager.contentsOfDirectory(atPath: rootPath)
+        for content in let docContents = docContents {
             do {
                 try manager.removeItem(at: documents.appendingPathComponent(content))
             } catch {

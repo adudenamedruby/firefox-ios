@@ -105,8 +105,8 @@ class TestSwiftData: XCTestCase {
             return
         }
         db.withConnection(SwiftData.Flags.readWriteCreate) { db in
-            try! db.executeChange("CREATE TABLE foo ( bar TEXT, baz INTEGER )")
-            try! db.executeChange("INSERT INTO foo VALUES (NULL, 1), ('here', 2)")
+            try? db.executeChange("CREATE TABLE foo ( bar TEXT, baz INTEGER )")
+            try? db.executeChange("INSERT INTO foo VALUES (NULL, 1), ('here', 2)")
             let shouldBeString = db.executeQuery("SELECT bar FROM foo WHERE baz = 2", factory: { (row) in row["bar"] }).asArray()[0]
             guard let s = shouldBeString as? String else {
                 XCTFail("Couldn't cast.")

@@ -10,9 +10,9 @@ class TextContentDetector {
         case link(URL)
     }
 
-    private static let dataDetector: NSDataDetector = {
+    private static let dataDetector: NSDataDetector? = {
         let types: NSTextCheckingResult.CheckingType = [.link, .phoneNumber]
-        return try! NSDataDetector(types: types.rawValue)
+        return try? NSDataDetector(types: types.rawValue)
     }()
 
     static func detectTextContent(_ content: String) -> DetectedType? {

@@ -76,7 +76,11 @@ class TestBrowserDB: XCTestCase {
         XCTAssertTrue(files.exists("foo.db-wal"))
 
         // Grab a pointer to the -shm so we can compare later.
-        let shmAAttributes = try! files.attributesForFileAt(relativePath: "foo.db-shm")
+        do {
+            let shmAAttributes = try? files.attributesForFileAt(relativePath: "foo.db-shm")
+        } catch {
+            XCTFail("Could not get attributes for file")
+        }
         let creationA = shmAAttributes[FileAttributeKey.creationDate] as! Date
         let inodeA = (shmAAttributes[FileAttributeKey.systemFileNumber] as! NSNumber).uintValue
 
