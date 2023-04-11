@@ -169,7 +169,7 @@ class SearchEngines {
     }
 
     private var customEngineFilePath: String {
-        let profilePath = try! self.fileAccessor.getAndEnsureDirectory() as NSString
+        let profilePath = try? self.fileAccessor.getAndEnsureDirectory() as NSString
         return profilePath.appendingPathComponent(customSearchEnginesFileName)
     }
 

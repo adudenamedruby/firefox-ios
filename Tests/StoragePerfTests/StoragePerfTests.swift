@@ -17,7 +17,12 @@ class MockFiles: FileAccessor {
 class HistoryFrecencyPerfTests: XCTestCase {
     func testFrecencyPerf() {
         let files = MockFiles()
-        let placesDatabasePath = URL(fileURLWithPath: (try! files.getAndEnsureDirectory()), isDirectory: true).appendingPathComponent("places.db").path
+        do {
+            let placesDatabasePath = URL(fileURLWithPath: (try files.getAndEnsureDirectory()), isDirectory: true).appendingPathComponent("places.db").path
+        } catch let error {
+            XCTFail("Failed with error: \(error.localizedDescription)")
+        }
+        
         let places = RustPlaces(databasePath: placesDatabasePath)
         _ = places.reopenIfClosed()
         let count = 100

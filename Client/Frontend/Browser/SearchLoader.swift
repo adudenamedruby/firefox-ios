@@ -8,7 +8,7 @@ import Storage
 import Glean
 import Common
 
-private let URLBeforePathRegex = try! NSRegularExpression(pattern: "^https?://([^/]+)/", options: [])
+private let URLBeforePathRegex = try? NSRegularExpression(pattern: "^https?://([^/]+)/", options: [])
 
 /**
  * Shared data source for the SearchViewController and the URLBar domain completion.
@@ -32,7 +32,7 @@ class SearchLoader: Loader<Cursor<Site>, SearchViewController>, FeatureFlaggable
 
     fileprivate lazy var topDomains: [String] = {
         let filePath = Bundle.main.path(forResource: "topdomains", ofType: "txt")
-        return try! String(contentsOfFile: filePath!).components(separatedBy: "\n")
+        return try? String(contentsOfFile: filePath!).components(separatedBy: "\n")
     }()
 
     fileprivate func getBookmarksAsSites(matchingSearchQuery query: String, limit: UInt, completionHandler: @escaping (([Site]) -> Void)) {

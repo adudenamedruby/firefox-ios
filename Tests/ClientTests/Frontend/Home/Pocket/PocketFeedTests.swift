@@ -15,7 +15,11 @@ class PocketStoriesTests: XCTestCase {
     /// Setup a basic web server that binds to a random port and that has one default handler on /hello
     fileprivate func setupWebServer() {
         let path = Bundle(for: type(of: self)).path(forResource: "pocketglobalfeed", ofType: "json")
-        let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: path!))
+        } catch {
+            XCTFail("Unable to get data.")
+        }
 
         webServer = GCDWebServer()
         webServer.addHandler(forMethod: "GET", path: "/pocketglobalfeed", request: GCDWebServerRequest.self) { (request) -> GCDWebServerResponse in

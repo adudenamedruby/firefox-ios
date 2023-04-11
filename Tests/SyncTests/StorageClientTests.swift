@@ -21,7 +21,7 @@ func massivify(record: Record<CleartextPayloadJSON>) -> JSON? {
 class StorageClientTests: XCTestCase {
     func testPartialJSON() {
         let body = "0"
-        let o: Any? = try! JSONSerialization.jsonObject(with: body.data(using: .utf8)!, options: .allowFragments)
+        let o: Any? = try? JSONSerialization.jsonObject(with: body.data(using: .utf8)!, options: .allowFragments)
         XCTAssertTrue(JSON(o!).isInt())
     }
 

@@ -19,7 +19,7 @@ class TestSwiftData: XCTestCase {
         let files = MockFiles()
         do {
             try files.remove("testSwiftData.db")
-            testDB = (try! (files.getAndEnsureDirectory() as NSString)).appendingPathComponent("testSwiftData.db")
+            testDB = (try (files.getAndEnsureDirectory() as NSString)).appendingPathComponent("testSwiftData.db")
         } catch let error {
             XCTFail("Failed with error: \(error.localizedDescription)")
         }

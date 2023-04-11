@@ -35,10 +35,11 @@ class UIPasteboardExtensionsTests: XCTestCase {
     func testAddGIFImage() {
         let path = Bundle(for: self.classForCoder).path(forResource: "image", ofType: "gif")!
         do {
-            let data = try! Data(contentsOf: URL(fileURLWithPath: path))
+            let data = try Data(contentsOf: URL(fileURLWithPath: path))
         } catch let error {
             XCTFail("Failed with error: \(error.localizedDescription)")
         }
+
         let url = URL(string: "http://foo.bar")!
         pasteboard.addImageWithData(data, forURL: url)
         verifyPasteboard(expectedURL: url, expectedImageTypeKey: kUTTypeGIF)
