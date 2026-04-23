@@ -172,8 +172,14 @@
 /* Show Firefox Browser Privacy Notice page from the Privacy section in the settings. See https://www.mozilla.org/privacy/firefox/ */
 "Settings.PrivacyNotice.Title.v137" = "Obvestilo o zasebnosti";
 
+/* Title for a link that explains what Mozilla means by Rollouts */
+"Settings.Rollouts.Link.v148" = "Več o tem";
+
 /* A short description that explains that Mozilla may change features remotely. %@ is the app name (e.g. Firefox). */
 "Settings.Rollouts.Message.v148" = "%@ bo izboljševal zmogljivosti, zanesljivost in učinkovitost delovanja med posodobitvami. Spremembe se uveljavljajo na daljavo.";
+
+/* Label used as a toggle item in Settings. When this is off, the user is opting out of all rollouts. */
+"Settings.Rollouts.Title.v148" = "Dovoli izboljšave na daljavo";
 
 /* In the settings menu, in the General section, this is the title for the option that allows user to disable the autohide feature of the tab and address bar. */
 "Settings.ScrollToHideTabAndAddressBar.Title.v138" = "Podrsajte, da skrijete vrstico z zavihki in naslovom";
@@ -238,11 +244,35 @@
 /* Title for a link that explains what Mozilla means by Studies */
 "Settings.Studies.Link.v136" = "Več o tem";
 
+/* Title for a link that explains what Mozilla means by Studies */
+"Settings.Studies.Link.v148" = "Več o tem";
+
 /* A short description that explains that Mozilla is running studies */
 "Settings.Studies.Message.v136" = "Preizkusite funkcije in ideje, preden so na voljo vsem.";
 
+/* A short description that explains that Mozilla is running studies. %@ is the app name (e.g. Firefox). */
+"Settings.Studies.Message.v148" = "%@ naključno izbira uporabnike za preizkušanje novosti, kar pripomore k izboljšanju kakovosti za vse.";
+
 /* Label used as a toggle item in Settings. When this is off, the user is opting out of all studies. */
 "Settings.Studies.Title.v136" = "Nameščaj in izvajaj raziskave";
+
+/* This is the footer text for the setting that toggles the Summarize feature under the Summarize settings section. */
+"Settings.Summarize.FooterTitle.v142" = "Omogoča dostop do povzemanja vsebine strani.";
+
+/* This is the footer text for the gestures features under the Summarize settings section. */
+"Settings.Summarize.GesturesSection.FooterTitle.v142" = "Potresite napravo, da povzamete vsebino strani.";
+
+/* This is the title for the setting that toggles the Shake Gesture feature under the Summarize settings section. */
+"Settings.Summarize.GesturesSection.ShakeGestureTitle.v142" = "Potresite za povzetek";
+
+/* This is the section title for the gestures features under the Summarize settings section. */
+"Settings.Summarize.GesturesSection.Title.v142" = "Poteze";
+
+/* This is the title for the setting that toggles the Summarize feature under the Summarize settings section. */
+"Settings.Summarize.SummarizePagesTitle.v142" = "Povzemaj vsebino strani";
+
+/* In the settings menu, in the General section, this is the title for the Summarize settings section. */
+"Settings.Summarize.Title.v142" = "Povzetki strani";
 
 /* Title for a link that explains how Mozilla send technical and interaction data. */
 "Settings.TechnicalData.Link.v136" = "Več o tem";
