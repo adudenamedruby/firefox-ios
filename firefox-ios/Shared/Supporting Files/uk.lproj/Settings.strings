@@ -266,7 +266,7 @@
 "Settings.Summarize.GesturesSection.FooterTitle.v142" = "Потрусіть пристрій з боку в бік, щоб підсумувати вміст сторінки.";
 
 /* This is the title for the setting that toggles the Shake Gesture feature under the Summarize settings section. */
-"Settings.Summarize.GesturesSection.ShakeGestureTitle.v142" = "Струснути, щоб підсумувати";
+"Settings.Summarize.GesturesSection.ShakeGestureTitle.v142" = "Потрусити, щоб підсумувати";
 
 /* This is the section title for the gestures features under the Summarize settings section. */
 "Settings.Summarize.GesturesSection.Title.v142" = "Жести";
