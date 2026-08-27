@@ -170,7 +170,7 @@
 "Settings.Notifications.TurnOnNotificationsTitle.v112" = "Ενεργοποίηση ειδοποιήσεων";
 
 /* Show Firefox Browser Privacy Notice page from the Privacy section in the settings. See https://www.mozilla.org/privacy/firefox/ */
-"Settings.PrivacyNotice.Title.v137" = "Σημείωση απορρήτου";
+"Settings.PrivacyNotice.Title.v137" = "Δήλωση απορρήτου";
 
 /* Title for a link that explains what Mozilla means by Rollouts */
 "Settings.Rollouts.Link.v148" = "Μάθετε περισσότερα";
