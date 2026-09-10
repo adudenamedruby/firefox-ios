@@ -67,12 +67,6 @@
 /* On the main menu, at the top, title for the banner which suggest user can set Firefox as default browser. %@ is the app name */
 "MainMenu.HeaderBanner.Title.v142" = "A %@ alapértelmezetté tétele";
 
-/* On the main menu, a title for a label that indicate the current option/action state is off. */
-"MainMenu.Off.Title.v141" = "Ki";
-
-/* On the main menu, a title for a label that indicate the current option/action state is on. */
-"MainMenu.On.Title.v141" = "Be";
-
 /* On the main menu, the accessibility label for the action that will take the user to the Bookmarks panel. */
 "MainMenu.PanelLinkSection.AccessibilityLabels.Bookmarks.v132" = "Könyvjelzők";
 
@@ -179,7 +173,7 @@
 "MainMenu.Submenus.Save.AddToShortcuts.Subtitle.v131" = "Indítóikon";
 
 /* On the main menu, in the Save submenu, the title for the menu component that allows a user to add the current website to the shortcuts on the homepage. */
-"MainMenu.Submenus.Save.AddToShortcuts.Title.v131" = "Hozzáadás a Parancsokhoz";
+"MainMenu.Submenus.Save.AddToShortcuts.Title.v131" = "Hozzáadás az indítóikonokhoz";
 
 /* On the main menu, a string below the Save submenu title, indicating what kind of tools are available in that menu. This string is for the Bookmarks tool. */
 "MainMenu.Submenus.Save.BookmarkThisPage.Subtitle.v131" = "Könyvjelző hozzáadása";
@@ -194,7 +188,7 @@
 "MainMenu.Submenus.Save.RemoveFromReadingList.Title.v131" = "Eltávolítás az olvasási listáról";
 
 /* On the main menu, in the Save submenu, the title for the menu component that allows a user to remove the current website from the shortcuts on the homepage. */
-"MainMenu.Submenus.Save.RemoveFromShortcuts.Title.v131" = "Eltávolítás a Parancsokból";
+"MainMenu.Submenus.Save.RemoveFromShortcuts.Title.v131" = "Eltávolítás az indítóikonok közül";
 
 /* On the main menu, a string below the Save submenu title, indicating what kind of tools are available in that menu. This string is for the Save as PDF tool. */
 "MainMenu.Submenus.Save.SaveAsPDF.Subtitle.v131" = "PDF";
@@ -262,9 +256,6 @@
 /* On the main menu, a string below the Tool submenu tiitle, indicating what kind of tools are available in that menu. This string is for the Night Mode tool. */
 "MainMenu.Submenus.Tools.NightMode.Subtitle.v131" = "Éjszakai mód";
 
-/* On the main menu, in the tools submenu, the title for the menu component that indicates the current page zoom level. %@ is the current zoom level percentage. */
-"MainMenu.Submenus.Tools.PageZoom.Title.v140" = "Oldalnagyítás (%@)";
-
 /* On the main menu, in the tools submenu, the title for the menu component that indicates the current page zoom level. */
 "MainMenu.Submenus.Tools.PageZoomV2.Title.v141" = "Oldal nagyítása";
 
@@ -297,12 +288,6 @@
 
 /* On the main menu, the title for the action that will take the user to the Share module in the application. */
 "MainMenu.Submenus.Tools.Share.Title.v144" = "Megosztás";
-
-/* On the main menu, the title for the action that will turn Website's Dark Mode off in the application. */
-"MainMenu.Submenus.Tools.WebsiteDarkMode.Off.Title.v137" = "Webhely sötét módjának kikapcsolása";
-
-/* On the main menu, the title for the action that will turn Website's Dark Mode on in the application. */
-"MainMenu.Submenus.Tools.WebsiteDarkMode.On.Title.v137" = "Webhely sötét módjának bekapcsolása";
 
 /* On the main menu, the title for the action that indicate, website dark mode can be turned on or off. */
 "MainMenu.Submenus.Tools.WebsiteDarkMode.Title.v141" = "Sötét mód a webhelyen";
