@@ -263,7 +263,7 @@
 "Settings.Summarize.FooterTitle.v142" = "Tio provizas aliron al resumoj de paĝoj.";
 
 /* This is the footer text for the gestures features under the Summarize settings section. */
-"Settings.Summarize.GesturesSection.FooterTitle.v142" = "Skuu vian aparanto ambaŭflanken por resumi paĝon.";
+"Settings.Summarize.GesturesSection.FooterTitle.v142" = "Skuu vian aparaton ambaŭflanken por resumi paĝon.";
 
 /* This is the title for the setting that toggles the Shake Gesture feature under the Summarize settings section. */
 "Settings.Summarize.GesturesSection.ShakeGestureTitle.v142" = "Skui por resumi";
