@@ -1,5 +1,5 @@
 /* This label is used for a button in the address list screen allowing users to manage their saved addresses. It's meant to direct users to where they can add, remove, or edit their saved addresses. */
-"Addresses.ManageAddressesButton.v130" = "管理已存地址";
+"Addresses.ManageAddressesButton.v130" = "管理已儲存的地址";
 
 /* Accessibility label for an address list item in autofill settings screen. The %@ parameter is the address of the user that will read the name, street, city, state, postal code if available. */
 "Addresses.Settings.ListItemA11y.v130" = "%@ 的地址";
