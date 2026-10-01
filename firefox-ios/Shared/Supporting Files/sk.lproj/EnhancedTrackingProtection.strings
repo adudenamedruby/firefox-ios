@@ -104,7 +104,7 @@
 "Menu.EnhancedTrackingProtection.On.NotSecure.Title.v128" = "Buďte opatrní na tejto stránke";
 
 /* Title for the enhanced tracking protection screen when the user has selected to be protected. %@ is the app name (e.g. Firefox). */
-"Menu.EnhancedTrackingProtection.On.Title.v128" = "%@ je na stráži";
+"Menu.EnhancedTrackingProtection.On.Title.v128" = "%@ vás stráži";
 
 /* The title for the privacy settings button inside the enhanced tracking protection screen. */
 "Menu.EnhancedTrackingProtection.PrivacySettings.Title.v128" = "Nastavenia ochrany súkromia";
