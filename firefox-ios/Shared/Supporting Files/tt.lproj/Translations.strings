@@ -1,0 +1,33 @@
+/* On top of the bottom toolbar, there can be a translations banner, this is the accessibility label for the close button that appears on the banner that allows the user to dismiss the translations banner. */
+"Translations.Banner.Close.Button.AccessibilityLabel.v145" = "Тәрҗемә панелен ябу";
+
+/* On top of the bottom toolbar, there can be a translations banner, this is the title for the text that appears on the banner to inform the user that the page has been translated to another language. %1$@ is the original language and %2$@ is the language that the page was translated to. */
+"Translations.Banner.ConfirmationTitleLabel.v145" = "%1$@ теленнән %2$@ теленә тәрҗемә ителде";
+
+/* On top of the bottom toolbar, there can be a translations banner, this is the accessibility label for the loading button that appears when the page is being translated. */
+"Translations.Banner.Loading.Button.AccessibilityLabel.v145" = "Битне тәрҗемә ителә";
+
+/* On top of the bottom toolbar, there can be a translations banner, this is the title for the button that appears on the banner that allows the user to try to translate a page again after facing an error. */
+"Translations.Banner.RetryButton.v145" = "Кабатлау";
+
+/* On top of the bottom toolbar, there can be a translations banner, this is the title for the button that appears on the banner that allows the user to tap on and translate the webpage. */
+"Translations.Banner.TranslateButton.v145" = "Тәрҗемә итү";
+
+/* This is the text on the button used to translate a page from one language to another and the button is shown on the translation feature bottom sheet view. */
+"Translations.Sheet.Button.v145" = "Тәрҗемә итү";
+
+/* This is the text for the cell that indicates that a user can choose a language to translate from, as part of the bottom sheet view for the translations feature. */
+"Translations.Sheet.ChooseLanguage.v145" = "Телне сайлау";
+
+/* On the translation feature bottom sheet, this is the text that describes that an error has occurred. */
+"Translations.Sheet.Error.GeneralSubtitle.v145" = "Зинһар янәдән тырышып карагыз.";
+
+/* This is the text on the secondary button used to indicate that page is being translated and the button is shown on the translation feature bottom sheet view. */
+"Translations.Sheet.LoadingButton.v145" = "Битне тәрҗемә ителә";
+
+/* This is the text on the secondary button used to restore the translated page to its original language and the button is shown on the translation feature bottom sheet view. */
+"Translations.Sheet.ShowOriginalButton.v145" = "Оригиналны күрсәтү";
+
+/* This is the title for the bottom sheet view that allows users to configure their language preferences for the translations feature. */
+"Translations.Sheet.TitleLabel.v145" = "Битне тәрҗемә итү";
+
