@@ -128,7 +128,7 @@
 "Settings.CrashReports.Link.v136" = "ვრცლად";
 
 /* On the Settings screen, this is the subtitle text for a toggle which controls automatically sending crash reports. */
-"Settings.CrashReports.Message.v136" = "დაგვეხმარება ბრაუზერის ხარვეზების დადგენასა და მოგვარებაში.";
+"Settings.CrashReports.Message.v136" = "გვეხმარება ბრაუზერის ხარვეზების დადგენასა და მოგვარებაში.";
 
 /* On the Settings screen, this is the title text for a toggle which controls automatically sending crash reports. */
 "Settings.CrashReports.Title.v135" = "უეცარი გათიშვის მოხსენებების თვითგაგზავნა";
@@ -155,7 +155,7 @@
 "Settings.Notifications.SystemNotificationsDisabledMessage.v112" = "გამორთული გაქვთ %1$@-შეტყობინებები. ჩართეთ მოწყობილობის პარამეტრებიდან Settings > Notifications > %2$@";
 
 /* This is the description for the setting that toggles Tips and Features feature in the settings menu under the Notifications section. %@ is the app name (e.g. Firefox). */
-"Settings.Notifications.TipsAndFeaturesNotificationsStatus.v112" = "გაეცანით სასარგებლო შესაძლებლობებსა რჩევებს, რომ მეტად სრულყოფილად გამოიყენოთ %@.";
+"Settings.Notifications.TipsAndFeaturesNotificationsStatus.v112" = "გაეცანით სასარგებლო შესაძლებლობებსა თუ რჩევებს, რომ მეტად სრულყოფილად გამოიყენოთ %@.";
 
 /* This is the title for the setting that toggles Tips and Features feature in the settings menu under the Notifications section. */
 "Settings.Notifications.TipsAndFeaturesNotificationsTitle.v112" = "რჩევები და შესაძლებლობები";
@@ -172,8 +172,11 @@
 /* Show Firefox Browser Privacy Notice page from the Privacy section in the settings. See https://www.mozilla.org/privacy/firefox/ */
 "Settings.PrivacyNotice.Title.v137" = "პირადულობის განაცხადი";
 
+/* Title for a link that explains what Mozilla means by Rollouts */
+"Settings.Rollouts.Link.v148" = "ვრცლად";
+
 /* A short description that explains that Mozilla may change features remotely. %@ is the app name (e.g. Firefox). */
-"Settings.Rollouts.Message.v148" = "%@ შეძლებს გააუმჯობესოს შესაძლებლობები, წარმადობა და მდგრადობა განახლებებს შორის შუალედშიც. ცვლილებები დაშორებული რეჟიმით.";
+"Settings.Rollouts.Message.v148" = "%@ გააუმჯობესებს შესაძლებლობებს, წარმადობასა და მდგრადობას განახლებებს შორის შუალედშიც. ცვლილებები აისახება დაშორებულად.";
 
 /* Label used as a toggle item in Settings. When this is off, the user is opting out of all rollouts. */
 "Settings.Rollouts.Title.v148" = "დაშორებულად გაუმჯობესების ნებართვა";
@@ -241,8 +244,14 @@
 /* Title for a link that explains what Mozilla means by Studies */
 "Settings.Studies.Link.v136" = "ვრცლად";
 
+/* Title for a link that explains what Mozilla means by Studies */
+"Settings.Studies.Link.v148" = "ვრცლად";
+
 /* A short description that explains that Mozilla is running studies */
 "Settings.Studies.Message.v136" = "გამოცადეთ შესაძლებლობები ჯერ კიდევ ჩანაფიქრის დონეზე, სანამ ყველასთვის ხილული გახდება.";
+
+/* A short description that explains that Mozilla is running studies. %@ is the app name (e.g. Firefox). */
+"Settings.Studies.Message.v148" = "%@ შემთხვევითობით ირჩევს მომხმარებლებს შესაძლებლობების შესამოწმებლად, რაც საყოველთაოდ აუმჯობესებს ხარისხს.";
 
 /* Label used as a toggle item in Settings. When this is off, the user is opting out of all studies. */
 "Settings.Studies.Title.v136" = "კვლევების ჩამატება და გაშვება";
@@ -257,7 +266,7 @@
 "Settings.Summarize.GesturesSection.FooterTitle.v142" = "შეარხიეთ მოწყობილობა გვერდის შესაჯამებლად.";
 
 /* This is the title for the setting that toggles the Shake Gesture feature under the Summarize settings section. */
-"Settings.Summarize.GesturesSection.ShakeGestureTitle.v142" = "შერხევა შეჯამებისთვის";
+"Settings.Summarize.GesturesSection.ShakeGestureTitle.v142" = "შერხევით შეჯამება";
 
 /* This is the section title for the gestures features under the Summarize settings section. */
 "Settings.Summarize.GesturesSection.Title.v142" = "ჟესტები";
