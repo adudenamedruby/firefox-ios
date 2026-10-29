@@ -89,7 +89,7 @@
 "Settings.Appearance.Zoom.Title.v140" = "Масштаб сторінки";
 
 /* Zoom level title under page zoom settings to select the default zoom level for all websites */
-"Settings.Appearance.Zoom.ZoomLevelTitle.v140" = "Рівень масштабування";
+"Settings.Appearance.Zoom.ZoomLevelTitle.v140" = "Масштаб";
 
 /* In the settings menu, in the General section, this is the title for Autofills & Passwords customization section. */
 "Settings.AutofillAndPassword.Title.v137" = "Автозаповнення і паролі";
@@ -266,7 +266,7 @@
 "Settings.Summarize.GesturesSection.FooterTitle.v142" = "Потрусіть пристрій з боку в бік, щоб підсумувати вміст сторінки.";
 
 /* This is the title for the setting that toggles the Shake Gesture feature under the Summarize settings section. */
-"Settings.Summarize.GesturesSection.ShakeGestureTitle.v142" = "Струснути, щоб підсумувати";
+"Settings.Summarize.GesturesSection.ShakeGestureTitle.v142" = "Потрусити, щоб підсумувати";
 
 /* This is the section title for the gestures features under the Summarize settings section. */
 "Settings.Summarize.GesturesSection.Title.v142" = "Жести";
@@ -308,5 +308,5 @@
 "Settings.Translation.Title.v145" = "Переклад";
 
 /* This is the title for the setting that toggles the Translation feature that allows users to translate web pages under the Translation settings section. */
-"Settings.Translation.ToggleTitle.v145" = "Увімкнути переклад";
+"Settings.Translation.ToggleTitle.v145" = "Увімкнути переклади";
 
