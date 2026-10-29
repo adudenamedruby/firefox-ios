@@ -131,7 +131,7 @@
 "Settings.CrashReports.Message.v136" = "Toto nám pomáha diagnostikovať a riešiť problémy s prehliadačom.";
 
 /* On the Settings screen, this is the title text for a toggle which controls automatically sending crash reports. */
-"Settings.CrashReports.Title.v135" = "Automaticky odosielať správy o zlyhaní";
+"Settings.CrashReports.Title.v135" = "Automaticky odosielať hlásenia o zlyhaní";
 
 /* Title for a link that explains how Mozilla send daily usage ping. */
 "Settings.DailyUsagePing.Link.v136" = "Ďalšie informácie";
@@ -140,7 +140,7 @@
 "Settings.DailyUsagePing.Message.v135" = "Toto pomáha spoločnosti %@ odhadnúť počet aktívnych používateľov.";
 
 /* On the Settings screen, this is the title text for a toggle which controls automatically sending daily usage ping. */
-"Settings.DailyUsagePing.Title.v135" = "Ping denného používania";
+"Settings.DailyUsagePing.Title.v135" = "Denný signál o používaní";
 
 /* Title displayed in header of the FxA settings panel. */
 "Settings.FxA.Title.v119" = "Účet";
@@ -179,7 +179,7 @@
 "Settings.Rollouts.Message.v148" = "%@ vylepší funkcie, výkon a stabilitu medzi aktualizáciami. Zmeny sa aplikujú na diaľku.";
 
 /* Label used as a toggle item in Settings. When this is off, the user is opting out of all rollouts. */
-"Settings.Rollouts.Title.v148" = "Povoliť vzdialené vylepšenia";
+"Settings.Rollouts.Title.v148" = "Povoliť vylepšenia na diaľku";
 
 /* In the settings menu, in the General section, this is the title for the option that allows user to disable the autohide feature of the tab and address bar. */
 "Settings.ScrollToHideTabAndAddressBar.Title.v138" = "Karty a panel s adresou skrývať rolovaním";
@@ -284,7 +284,7 @@
 "Settings.TechnicalData.Message.v136" = "Údaje o vašom zariadení, konfigurácii hardvéru a používaní nám pomáhajú zlepšovať funkcie, výkon a stabilitu %@u.";
 
 /* On the Settings screen, this is the title text for a toggle which controls sending technical and interaction data. */
-"Settings.TechnicalData.Title.v136" = "Odosielať technické údaje a údaje o interakciách";
+"Settings.TechnicalData.Title.v136" = "Odosielať technické údaje a údaje o používaní";
 
 /* Terms of Use settings section title */
 "Settings.TermsOfUse.Title.v137" = "Podmienky používania";
