@@ -2,6 +2,15 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import { DateNormalizationUtils } from "resource://gre/modules/DateNormalizationUtils.sys.mjs";
+
+const lazy = {};
+ChromeUtils.defineLazyGetter(
+  lazy,
+  "l10n",
+  () => new Localization(["toolkit/formautofill/formAutofill.ftl"], true)
+);
+
 // The list of known and supported credit card network ids ("types")
 // This list mirrors the networks from dom/payments/BasicCardPayment.cpp
 // and is defined by https://www.w3.org/Payments/card-network-ids
@@ -17,6 +26,14 @@ const SUPPORTED_NETWORKS = Object.freeze([
   "visa",
 ]);
 
+// The Fluent messages naming the security code of the networks that have their
+// own name for it. Any other network uses the general name.
+const SECURITY_CODE_L10N_IDS = new Map([
+  ["visa", "credit-card-security-code-name-visa"],
+  ["mastercard", "credit-card-security-code-name-mastercard"],
+  ["amex", "credit-card-security-code-name-amex"],
+]);
+
 // This lists stores lower cased variations of popular credit card network
 // names for matching against strings.
 export const NETWORK_NAMES = {
@@ -28,8 +45,7 @@ export const NETWORK_NAMES = {
 // Based on https://en.wikipedia.org/wiki/Payment_card_number
 //
 // Notice:
-//   - CarteBancaire (`4035`, `4360`) is now recognized as Visa.
-//   - UnionPay (`63--`) is now recognized as Discover.
+//   - CarteBancaire (`4035`, `4360`) must precede the generic Visa entry.
 // This means that the order matters.
 // First we'll try to match more specific card,
 // and if that doesn't match we'll test against the more generic range.
@@ -45,17 +61,15 @@ const CREDIT_CARD_IIN = [
   { type: "diners", start: 36, end: 36, len: [14, 19] },
   { type: "diners", start: 38, end: 39, len: [14, 19] },
   { type: "discover", start: 6011, end: 6011, len: [16, 19] },
-  { type: "discover", start: 622126, end: 622925, len: [16, 19] },
-  { type: "discover", start: 624000, end: 626999, len: [16, 19] },
-  { type: "discover", start: 628200, end: 628899, len: [16, 19] },
-  { type: "discover", start: 64, end: 65, len: [16, 19] },
+  { type: "discover", start: 644, end: 649, len: [16, 19] },
+  { type: "discover", start: 65, end: 65, len: [16, 19] },
   { type: "jcb", start: 3528, end: 3589, len: [16, 19] },
   { type: "mastercard", start: 2221, end: 2720, len: 16 },
   { type: "mastercard", start: 51, end: 55, len: 16 },
-  { type: "mir", start: 2200, end: 2204, len: 16 },
+  { type: "mir", start: 2200, end: 2204, len: [16, 19] },
   { type: "unionpay", start: 62, end: 62, len: [16, 19] },
   { type: "unionpay", start: 81, end: 81, len: [16, 19] },
-  { type: "visa", start: 4, end: 4, len: 16 },
+  { type: "visa", start: 4, end: 4, len: [13, 19] },
 ].sort((a, b) => b.start - a.start);
 
 export class CreditCard {
@@ -130,7 +144,7 @@ export class CreditCard {
   }
 
   set expirationString(value) {
-    let { month, year } = CreditCard.parseExpirationString(value);
+    let { month, year } = DateNormalizationUtils.parseMonthYearString(value);
     this.expirationMonth = month;
     this.expirationYear = year;
   }
@@ -155,7 +169,7 @@ export class CreditCard {
     if (value) {
       let normalizedNumber = CreditCard.normalizeCardNumber(value);
       // Based on the information on wiki[1], the shortest valid length should be
-      // 12 digits (Maestro).
+      // 12 digits (Diners Club Carte Blanche has 14, but some legacy networks go lower).
       // [1] https://en.wikipedia.org/wiki/Payment_card_number
       normalizedNumber = normalizedNumber.match(/^\d{12,}$/)
         ? normalizedNumber
@@ -217,6 +231,7 @@ export class CreditCard {
 
   /**
    * Normalizes a credit card number.
+   *
    * @param {string} number
    * @return {string | null}
    * @memberof CreditCard
@@ -346,8 +361,8 @@ export class CreditCard {
   }
 
   /**
-   *
    * Please use getLabelInfo above, as it allows for localization.
+   *
    * @deprecated
    */
   static getLabel({ number, name }) {
@@ -363,74 +378,11 @@ export class CreditCard {
   }
 
   static normalizeExpirationMonth(month) {
-    month = parseInt(month, 10);
-    if (isNaN(month) || month < 1 || month > 12) {
-      return undefined;
-    }
-    return month;
+    return DateNormalizationUtils.normalizeMonth(month);
   }
 
   static normalizeExpirationYear(year) {
-    year = parseInt(year, 10);
-    if (isNaN(year) || year < 0) {
-      return undefined;
-    }
-    if (year < 100) {
-      year += 2000;
-    }
-    return year;
-  }
-
-  static parseExpirationString(expirationString) {
-    let rules = [
-      {
-        regex: /(?:^|\D)(\d{2})(\d{2})(?!\d)/,
-      },
-      {
-        regex: /(?:^|\D)(\d{4})[-/](\d{1,2})(?!\d)/,
-        yearIndex: 0,
-        monthIndex: 1,
-      },
-      {
-        regex: /(?:^|\D)(\d{1,2})[-/](\d{4})(?!\d)/,
-        yearIndex: 1,
-        monthIndex: 0,
-      },
-      {
-        regex: /(?:^|\D)(\d{1,2})[-/](\d{1,2})(?!\d)/,
-      },
-      {
-        regex: /(?:^|\D)(\d{2})(\d{2})(?!\d)/,
-      },
-    ];
-
-    expirationString = expirationString.replaceAll(" ", "");
-    for (let rule of rules) {
-      let result = rule.regex.exec(expirationString);
-      if (!result) {
-        continue;
-      }
-
-      let year, month;
-      const parsedResults = [parseInt(result[1], 10), parseInt(result[2], 10)];
-      if (!rule.yearIndex || !rule.monthIndex) {
-        month = parsedResults[0];
-        if (month > 12) {
-          year = parsedResults[0];
-          month = parsedResults[1];
-        } else {
-          year = parsedResults[1];
-        }
-      } else {
-        year = parsedResults[rule.yearIndex];
-        month = parsedResults[rule.monthIndex];
-      }
-
-      if (month >= 1 && month <= 12 && (year < 100 || year > 2000)) {
-        return { month, year };
-      }
-    }
-    return { month: undefined, year: undefined };
+    return DateNormalizationUtils.normalizeYear(year);
   }
 
   static normalizeExpiration({
@@ -439,30 +391,24 @@ export class CreditCard {
     expirationYear,
   }) {
     // Only prefer the string version if missing one or both parsed formats.
-    let parsedExpiration = {};
-    if (expirationString && (!expirationMonth || !expirationYear)) {
-      parsedExpiration = CreditCard.parseExpirationString(expirationString);
-    }
-    return {
-      month: CreditCard.normalizeExpirationMonth(
-        parsedExpiration.month || expirationMonth
-      ),
-      year: CreditCard.normalizeExpirationYear(
-        parsedExpiration.year || expirationYear
-      ),
-    };
+    return DateNormalizationUtils.normalizeComponents({
+      string: expirationString,
+      month: expirationMonth,
+      year: expirationYear,
+      parts: ["month", "year"],
+    });
   }
 
   static formatMaskedNumber(maskedNumber) {
-    return "*".repeat(4) + maskedNumber.substr(-4);
+    return "•".repeat(4) + maskedNumber.substr(-4);
   }
 
   static getMaskedNumber(number) {
-    return "*".repeat(4) + " " + number.substr(-4);
+    return "•".repeat(4) + " " + number.substr(-4);
   }
 
   static getLongMaskedNumber(number) {
-    return "*".repeat(number.length - 4) + number.substr(-4);
+    return "•".repeat(number.length - 4) + number.substr(-4);
   }
 
   static getCreditCardLogo(network) {
@@ -521,5 +467,35 @@ export class CreditCard {
     return this.isValidNetwork(network)
       ? `autofill-card-network-${network}`
       : null;
+  }
+
+  /**
+   * The Fluent message naming a card's security code the way its network does,
+   * such as "CVV" for Visa or "CVC" for Mastercard, with "Security code" for
+   * any other network.
+   *
+   * @param {string|null} network A network id, such as returned by `getType`.
+   * @returns {string}
+   */
+  static getSecurityCodeL10nId(network) {
+    return (
+      SECURITY_CODE_L10N_IDS.get(network) ??
+      "credit-card-security-code-name-other"
+    );
+  }
+
+  /**
+   * The localized name of a card's security code, see `getSecurityCodeL10nId`.
+   * The network is the record's `cc-type`, or else the one its number belongs
+   * to.
+   *
+   * @param {object} creditCard A credit card record.
+   * @returns {string}
+   */
+  static formatSecurityCodeName(creditCard) {
+    const network =
+      creditCard["cc-type"] ||
+      this.getType(this.normalizeCardNumber(creditCard["cc-number"]));
+    return lazy.l10n.formatValueSync(this.getSecurityCodeL10nId(network));
   }
 }
