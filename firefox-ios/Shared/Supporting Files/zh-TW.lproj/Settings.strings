@@ -1,5 +1,5 @@
 /* This label is used for a button in the address list screen allowing users to manage their saved addresses. It's meant to direct users to where they can add, remove, or edit their saved addresses. */
-"Addresses.ManageAddressesButton.v130" = "管理已存地址";
+"Addresses.ManageAddressesButton.v130" = "管理已儲存的地址";
 
 /* Accessibility label for an address list item in autofill settings screen. The %@ parameter is the address of the user that will read the name, street, city, state, postal code if available. */
 "Addresses.Settings.ListItemA11y.v130" = "%@ 的地址";
@@ -221,7 +221,7 @@
 "Settings.Search.Suggest.PrivateSession.Description.v125" = "於隱私瀏覽階段中顯示 Firefox Suggest 的建議內容";
 
 /* In the Search page of the Settings menu, the title for the setting to enable search browsing history. */
-"Settings.Search.Suggest.SearchBrowsingHistory.Title.v124" = "顯示瀏覽紀錄";
+"Settings.Search.Suggest.SearchBrowsingHistory.Title.v124" = "搜尋瀏覽紀錄";
 
 /* In the Search page of the Settings menu, the title for the setting to enable search bookmarks. */
 "Settings.Search.Suggest.SearchSearchBookmarks.Title.v124" = "搜尋書籤";
@@ -281,7 +281,7 @@
 "Settings.TechnicalData.Link.v136" = "更多資訊";
 
 /* On the Settings screen, this is the subtitle text for a toggle which controls sending technical and interaction data. %@ is the app name (e.g. Firefox). */
-"Settings.TechnicalData.Message.v136" = "關於您的裝置、硬體設定，以及您的使用方式，可幫助我們為所有使用者改進 %@ 功能、效能與穩定度。";
+"Settings.TechnicalData.Message.v136" = "關於您的裝置、硬體設定，以及您的使用方式的資料，可幫助我們改善 %@ 的功能、效能與穩定度。";
 
 /* On the Settings screen, this is the title text for a toggle which controls sending technical and interaction data. */
 "Settings.TechnicalData.Title.v136" = "傳送技術與互動資料";

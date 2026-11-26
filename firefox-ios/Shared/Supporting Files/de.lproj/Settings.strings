@@ -236,7 +236,7 @@
 "Settings.Search.Suggest.ShowNonSponsoredSuggestions.Title.v124.v2" = "Vorschläge aus dem Internet";
 
 /* In the Search page of the Settings menu, the description for the setting to enable Suggestions from sponsors. %@ is the app name (e.g. Firefox). - Firefox. */
-"Settings.Search.Suggest.ShowSponsoredSuggestions.Description.v124" = "Unterstützen Sie %@ mit gelegentlich gesponserten Vorschlägen";
+"Settings.Search.Suggest.ShowSponsoredSuggestions.Description.v124" = "Unterstützen Sie %@ mit gelegentlichen gesponserten Vorschlägen";
 
 /* In the Search page of the Settings menu, the title for the setting to enable Suggestions from sponsors. */
 "Settings.Search.Suggest.ShowSponsoredSuggestions.Title.v124" = "Vorschläge von Sponsoren";
@@ -260,7 +260,7 @@
 "Settings.Studies.Title.v148" = "Funktionsstudien erlauben";
 
 /* This is the footer text for the setting that toggles the Summarize feature under the Summarize settings section. */
-"Settings.Summarize.FooterTitle.v142" = "Bietet Zugriff auf Zusammenfassungsseiten.";
+"Settings.Summarize.FooterTitle.v142" = "Bietet Zugriff auf das Zusammenfassen von Seiten.";
 
 /* This is the footer text for the gestures features under the Summarize settings section. */
 "Settings.Summarize.GesturesSection.FooterTitle.v142" = "Schütteln Sie Ihr Gerät von einer Seite zur anderen, um eine Seite zusammenzufassen.";
