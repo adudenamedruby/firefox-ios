@@ -101,10 +101,10 @@
 "Menu.EnhancedTrackingProtection.On.NotSecure.Header.v128" = "Vaše pripojenie nie je zabezpečené.";
 
 /* Title for the enhanced tracking protection screen when the user has selected to be protected but the connection is not secure. */
-"Menu.EnhancedTrackingProtection.On.NotSecure.Title.v128" = "Buďte opatrní na tejto stránke";
+"Menu.EnhancedTrackingProtection.On.NotSecure.Title.v128" = "Na tejto stránke buďte opatrní";
 
 /* Title for the enhanced tracking protection screen when the user has selected to be protected. %@ is the app name (e.g. Firefox). */
-"Menu.EnhancedTrackingProtection.On.Title.v128" = "%@ je na stráži";
+"Menu.EnhancedTrackingProtection.On.Title.v128" = "%@ vás stráži";
 
 /* The title for the privacy settings button inside the enhanced tracking protection screen. */
 "Menu.EnhancedTrackingProtection.PrivacySettings.Title.v128" = "Nastavenia ochrany súkromia";

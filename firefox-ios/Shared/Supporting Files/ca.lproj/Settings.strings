@@ -146,7 +146,7 @@
 "Settings.FxA.Title.v119" = "Compte";
 
 /* This is the description for the setting that toggles Sync related notifications in the settings menu under the Notifications section. */
-"Settings.Notifications.SyncNotificationsStatus.v112" = "S'ha d'activar per a rebre pestanyes i per a notificar-vos quan inicieu la sessió en un altre dispositiu.";
+"Settings.Notifications.SyncNotificationsStatus.v112" = "S’ha d’activar per a rebre pestanyes i per a notificar-vos quan inicieu la sessió en un altre dispositiu.";
 
 /* This is the title for the setting that toggles Sync related notifications in the settings menu under the Notifications section. */
 "Settings.Notifications.SyncNotificationsTitle.v112" = "Sincronització";
@@ -171,6 +171,15 @@
 
 /* Show Firefox Browser Privacy Notice page from the Privacy section in the settings. See https://www.mozilla.org/privacy/firefox/ */
 "Settings.PrivacyNotice.Title.v137" = "Avís de privadesa";
+
+/* Title for a link that explains what Mozilla means by Rollouts */
+"Settings.Rollouts.Link.v148" = "Més informació";
+
+/* A short description that explains that Mozilla may change features remotely. %@ is the app name (e.g. Firefox). */
+"Settings.Rollouts.Message.v148" = "El %@ millorarà les funcions, el rendiment i l’estabilitat entre actualitzacions. Els canvis apliquen de forma remota.";
+
+/* Label used as a toggle item in Settings. When this is off, the user is opting out of all rollouts. */
+"Settings.Rollouts.Title.v148" = "Permet les millores remotes";
 
 /* In the settings menu, in the General section, this is the title for the option that allows user to disable the autohide feature of the tab and address bar. */
 "Settings.ScrollToHideTabAndAddressBar.Title.v138" = "Desplaceu-vos per amagar la barra d’adreces i de pestanyes";
@@ -203,7 +212,7 @@
 "Settings.Search.ShowSuggestions.v121" = "Mostra suggeriments de cerca";
 
 /* In the Search page of the Settings menu, the title for the Firefox Suggest settings section. */
-"Settings.Search.Suggest.AddressBarSetting.Title.v124" = "Barra d'adreces - Suggeriments del Firefox";
+"Settings.Search.Suggest.AddressBarSetting.Title.v124" = "Barra d’adreces - Suggeriments del Firefox";
 
 /* In the search page of the Settings menu, the title for the link to the SUMO Page about Firefox Suggest. */
 "Settings.Search.Suggest.LearnAboutSuggestions.v124" = "Més informació sobre els suggeriments del Firefox";
@@ -215,7 +224,7 @@
 "Settings.Search.Suggest.SearchBrowsingHistory.Title.v124" = "Cerca en l’historial de navegació";
 
 /* In the Search page of the Settings menu, the title for the setting to enable search bookmarks. */
-"Settings.Search.Suggest.SearchSearchBookmarks.Title.v124" = "Cerca en les adreces d'interès";
+"Settings.Search.Suggest.SearchSearchBookmarks.Title.v124" = "Cerca en les adreces d’interès";
 
 /* In the Search page of the Settings menu, the title for the setting to enable synced tabs. */
 "Settings.Search.Suggest.SearchSyncedTabs.Title.v124" = "Cerca en les pestanyes sincronitzades";
@@ -235,11 +244,20 @@
 /* Title for a link that explains what Mozilla means by Studies */
 "Settings.Studies.Link.v136" = "Més informació";
 
+/* Title for a link that explains what Mozilla means by Studies */
+"Settings.Studies.Link.v148" = "Més informació";
+
 /* A short description that explains that Mozilla is running studies */
 "Settings.Studies.Message.v136" = "Proveu funcions i idees abans que estiguin disponibles per a tothom.";
 
+/* A short description that explains that Mozilla is running studies. %@ is the app name (e.g. Firefox). */
+"Settings.Studies.Message.v148" = "El %@ selecciona usuaris aleatòriament per a provar funcions i poder millorar-ne la qualitat per a tothom.";
+
 /* Label used as a toggle item in Settings. When this is off, the user is opting out of all studies. */
 "Settings.Studies.Title.v136" = "Instal·la i executa estudis";
+
+/* Label used as a toggle item in Settings. When this is off, the user is opting out of all studies. */
+"Settings.Studies.Title.v148" = "Permet estudis de funcionalitat";
 
 /* This is the footer text for the setting that toggles the Summarize feature under the Summarize settings section. */
 "Settings.Summarize.FooterTitle.v142" = "Proporciona accés al resum de pàgines.";
